@@ -14,56 +14,56 @@ require "action_controller/metal/exceptions"
 # implement filters and actions to handle requests. The result of an action is
 # typically content generated from views.
 module ActionController
-  extend ActiveSupport::Autoload
+        extend ActiveSupport::Autoload
 
-  autoload :API
-  autoload :Base
-  autoload :Metal
-  autoload :Renderer
-  autoload :FormBuilder
+        autoload :API
+        autoload :Base
+        autoload :Metal
+        autoload :Renderer
+        autoload :FormBuilder
 
-  eager_autoload do
-    autoload :Caching
-  end
+        eager_autoload do
+                autoload :Caching
+        end
 
-  autoload_under "metal" do
-    autoload :ConditionalGet
-    autoload :ContentSecurityPolicy
-    autoload :Cookies
-    autoload :DataStreaming
-    autoload :DefaultHeaders
-    autoload :EtagWithTemplateDigest
-    autoload :EtagWithFlash
-    autoload :PermissionsPolicy
-    autoload :Flash
-    autoload :Head
-    autoload :Helpers
-    autoload :HttpAuthentication
-    autoload :BasicImplicitRender
-    autoload :ImplicitRender
-    autoload :Instrumentation
-    autoload :Live
-    autoload :Logging
-    autoload :MimeResponds
-    autoload :ParamsWrapper
-    autoload :Redirecting
-    autoload :Renderers
-    autoload :Rendering
-    autoload :RequestForgeryProtection
-    autoload :Rescue
-    autoload :Streaming
-    autoload :StrongParameters
-    autoload :ParameterEncoding
-    autoload :Testing
-    autoload :UrlFor
-  end
+        autoload_under "metal" do
+                autoload :ConditionalGet
+                autoload :ContentSecurityPolicy
+                autoload :Cookies
+                autoload :DataStreaming
+                autoload :DefaultHeaders
+                autoload :EtagWithTemplateDigest
+                autoload :EtagWithFlash
+                autoload :PermissionsPolicy
+                autoload :Flash
+                autoload :Head
+                autoload :Helpers
+                autoload :HttpAuthentication
+                autoload :BasicImplicitRender
+                autoload :ImplicitRender
+                autoload :Instrumentation
+                autoload :Live
+                autoload :Logging
+                autoload :MimeResponds
+                autoload :ParamsWrapper
+                autoload :Redirecting
+                autoload :Renderers
+                autoload :Rendering
+                autoload :RequestForgeryProtection
+                autoload :Rescue
+                autoload :Streaming
+                autoload :StrongParameters
+                autoload :ParameterEncoding
+                autoload :Testing
+                autoload :UrlFor
+        end
 
-  autoload_under "api" do
-    autoload :ApiRendering
-  end
+        autoload_under "api" do
+                autoload :ApiRendering
+        end
 
-  autoload :TestCase,           "action_controller/test_case"
-  autoload :TemplateAssertions, "action_controller/test_case"
+        autoload :TestCase,           "action_controller/test_case"
+        autoload :TemplateAssertions, "action_controller/test_case"
 end
 
 # Common Active Support usage in Action Controller
