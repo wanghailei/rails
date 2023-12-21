@@ -127,7 +127,7 @@ module ActionController
                         instance = controller.new
                         instance.set_request! request
                         instance.set_response! controller.make_response!(request)
-                        instance.render_to_string(*args)
+                        instance.render_to_string(*args) 
                 end
                 alias_method :render_to_string, :render # :nodoc:
 
